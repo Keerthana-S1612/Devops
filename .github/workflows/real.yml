@@ -20,4 +20,4 @@ jobs:
       - name: cp req.txt
         run: scp -o StrictHostKeyChecking=no -i devkey.pem requirements.txt ec2-user@43.205.120.93:/home/ec2-user/ 
       - name: run app
-        run: ssh -o StrictHostKeyChecking=no -i devkey.pem ec2-user@13.201.190.104 "cd /home/ec2-user && python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt && python3 app.py"
+        run: ssh -o StrictHostKeyChecking=no -i devkey.pem ec2-user@43.205.120.93 "cd /home/ec2-user && python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt && python3 app.py"
